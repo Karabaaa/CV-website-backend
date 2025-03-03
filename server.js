@@ -22,9 +22,9 @@ app.post("/send-email", async (req, res) => {
 
   const msg = {
     to: "amandine.moigno@gmail.com", // Remplace par l'adresse où recevoir les messages
-    from: email, // L'adresse de l'expéditeur
-    subject: subject,
-    text: message,
+    from: "amandine.moigno@gmail.com", // L'adresse de l'expéditeur
+    subject: subject + " - " + email,
+    text: message + " from " + email,
   }
 
   try {
